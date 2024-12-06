@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "Hotel Bella Vista",
+    "location": "Roma, Italia",
+    "description": "Lussuoso hotel con vista panoramica.",
+    "price": 120,
+    "availability": true
+  },
+  {
+    "id": 2,
+    "name": "Grand Palace Hotel",
+    "location": "Milano, Italia",
+    "description": "Eleganza moderna nel cuore della città.",
+    "price": 200,
+    "availability": false
+  }
+]
