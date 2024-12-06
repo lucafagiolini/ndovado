@@ -14,5 +14,61 @@
     "description": "Eleganza moderna nel cuore della città.",
     "price": 200,
     "availability": false
+  },
+  {
+    "id": 3,
+    "name": "Hotel Riviera",
+    "location": "Napoli, Italia",
+    "description": "Un'oasi di relax sul lungomare.",
+    "price": 150,
+    "availability": true
+  },
+  {
+    "id": 4,
+    "name": "Mountain Retreat",
+    "location": "Cortina d'Ampezzo, Italia",
+    "description": "Un rifugio tranquillo tra le Dolomiti.",
+    "price": 180,
+    "availability": true
+  },
+  {
+    "id": 5,
+    "name": "City Center Inn",
+    "location": "Firenze, Italia",
+    "description": "Confortevole e nel cuore della città.",
+    "price": 110,
+    "availability": true
+  },
+  {
+    "id": 6,
+    "name": "Lago Sereno Hotel",
+    "location": "Como, Italia",
+    "description": "Vista mozzafiato sul Lago di Como.",
+    "price": 250,
+    "availability": false
+  },
+  {
+    "id": 7,
+    "name": "Hotel Verona Classic",
+    "location": "Verona, Italia",
+    "description": "Stile classico vicino all'Arena.",
+    "price": 130,
+    "availability": true
+  },
+  {
+    "id": 8,
+    "name": "Seaside Paradise",
+    "location": "Rimini, Italia",
+    "description": "Ideale per vacanze in famiglia sulla spiaggia.",
+    "price": 140,
+    "availability": true
+  },
+  {
+    "id": 9,
+    "name": "Venetian Elegance",
+    "location": "Venezia, Italia",
+    "description": "Un soggiorno romantico vicino ai canali.",
+    "price": 300,
+    "availability": false
   }
 ]
