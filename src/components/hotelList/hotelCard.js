@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Card, CardContent, Typography, CircularProgress } from "@mui/material";
+import { CircularProgress } from "@mui/material";
+
+/* STYLE */
+import "../hotelList/hotelCard.scss";
 
 const HotelCard = () => {
   const [hotels, setHotels] = useState([]);
@@ -26,30 +29,21 @@ const HotelCard = () => {
   if (loading) return <CircularProgress />;
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexWrap: "wrap",
-        justifyContent: "center",
-        gap: "20px",
-      }}
-    >
+    <div className="hotel-list">
       {hotels.map((hotel) => (
-        <Card key={hotel.id} style={{ width: "300px", margin: "10px" }}>
-          <CardContent>
-            <Typography variant="h5">{hotel.name}</Typography>
-            <Typography>Location: {hotel.location}</Typography>
-            <Typography>Description: {hotel.description}</Typography>
-            <Typography>Price: €{hotel.price}/night</Typography>
-            <Typography>
-              Availability: {hotel.availability ? "Yes" : "No"}
-            </Typography>
-          </CardContent>
-        </Card>
+        <div className="hotel-card" key={hotel.id}>
+          <div className="card-image"></div>
+          <div className="card-content">
+            <n2>{hotel.name}</n2>
+            <span>Location: {hotel.location}</span>
+            <span>Description: {hotel.description}</span>
+            <span>Price: €{hotel.price}/night</span>
+            <span>Availability: {hotel.availability ? "Yes" : "No"}</span>
+          </div>
+        </div>
       ))}
     </div>
   );
 };
 
 export default HotelCard;
-

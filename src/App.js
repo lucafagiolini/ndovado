@@ -1,13 +1,12 @@
 import "./App.css";
 import Navbar from "../src/components/navbar/NavBar";
-import HotelCard from "./components/hotelCard";
+import HotelDisplay from "../src/components/hotelDisplay/hotelDisplay";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <h1>Available Hotels</h1>
-      <HotelCard />
+      <HotelDisplay />
     </div>
   );
 }
