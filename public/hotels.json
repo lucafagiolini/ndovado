@@ -5,7 +5,8 @@
     "location": "Roma, Italia",
     "description": "Lussuoso hotel con vista panoramica.",
     "price": 120,
-    "availability": true
+    "availability": true,
+    "image": "../img/hotel-img/hotel-1.jpg"
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "location": "Milano, Italia",
     "description": "Eleganza moderna nel cuore della città.",
     "price": 200,
-    "availability": false
+    "availability": false,
+    "image": "../img/hotel-img/hotel-2.jpg"
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "location": "Napoli, Italia",
     "description": "Un'oasi di relax sul lungomare.",
     "price": 150,
-    "availability": true
+    "availability": true,
+    "image": "../img/hotel-img/hotel-3.jpg"
   },
   {
     "id": 4,
@@ -29,7 +32,8 @@
     "location": "Cortina d'Ampezzo, Italia",
     "description": "Un rifugio tranquillo tra le Dolomiti.",
     "price": 180,
-    "availability": true
+    "availability": true,
+    "image": "../img/hotel-img/hotel-4.jpg"
   },
   {
     "id": 5,
@@ -37,7 +41,8 @@
     "location": "Firenze, Italia",
     "description": "Confortevole e nel cuore della città.",
     "price": 110,
-    "availability": true
+    "availability": true,
+    "image": "../img/hotel-img/hotel-5.jpg"
   },
   {
     "id": 6,
@@ -45,7 +50,8 @@
     "location": "Como, Italia",
     "description": "Vista mozzafiato sul Lago di Como.",
     "price": 250,
-    "availability": false
+    "availability": false,
+    "image": "../img/hotel-img/hotel-6.jpg"
   },
   {
     "id": 7,
@@ -53,7 +59,8 @@
     "location": "Verona, Italia",
     "description": "Stile classico vicino all'Arena.",
     "price": 130,
-    "availability": true
+    "availability": true,
+    "image": "../img/hotel-img/hotel-7.jpg"
   },
   {
     "id": 8,
@@ -61,7 +68,8 @@
     "location": "Rimini, Italia",
     "description": "Ideale per vacanze in famiglia sulla spiaggia.",
     "price": 140,
-    "availability": true
+    "availability": true,
+    "image": "../img/hotel-img/hotel-8.jpg"
   },
   {
     "id": 9,
@@ -69,6 +77,7 @@
     "location": "Venezia, Italia",
     "description": "Un soggiorno romantico vicino ai canali.",
     "price": 300,
-    "availability": false
+    "availability": false,
+    "image": "../img/hotel-img/hotel-9.jpg"
   }
 ]

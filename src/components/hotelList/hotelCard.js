@@ -11,7 +11,7 @@ const HotelCard = () => {
   useEffect(() => {
     const fetchHotels = async () => {
       try {
-        const response = await fetch("/hotels.json"); // Ensure hotels.json is in the public folder
+        const response = await fetch("/hotels.json");
         if (!response.ok) throw new Error("Failed to fetch hotels");
 
         const data = await response.json();
@@ -29,16 +29,24 @@ const HotelCard = () => {
   if (loading) return <CircularProgress />;
 
   return (
-    <div className="hotel-list">
+    <div className="hotel-list container">
       {hotels.map((hotel) => (
-        <div className="hotel-card" key={hotel.id}>
-          <div className="card-image"></div>
-          <div className="card-content">
-            <n2>{hotel.name}</n2>
-            <span>Location: {hotel.location}</span>
+        <div className="hotel-card row" key={hotel.id}>
+          <div className="hotel-image-box col-3">
+            <img className="hotel-image" src={hotel.image} alt={hotel.name} />
+            <button className="favorite-button">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+          <div className="hotel-details col-6">
+            <h2>{hotel.name}</h2>
             <span>Description: {hotel.description}</span>
-            <span>Price: €{hotel.price}/night</span>
+            <span>Location: {hotel.location}</span>
             <span>Availability: {hotel.availability ? "Yes" : "No"}</span>
+          </div>
+          <div className="hotel-cta col-3">
+            <button>Book Now</button>
+            <span>Price: €{hotel.price}/night</span>
           </div>
         </div>
       ))}

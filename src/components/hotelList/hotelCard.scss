@@ -1,9 +1,65 @@
 
 .hotel-list {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 !important;
+    margin: 0 !important;
 
     .hotel-card {
         border: 1px solid #e0e0e0;
+        border-radius: 15px;
         width: 100%;
+
+        padding: 1rem;
     }
+
+    /* HOTEL IMAGE  */
+
+    .hotel-image-box {
+        position: relative;
+        display: flex;
+        justify-content: start;
+        padding: 0;
+
+        .hotel-image {
+            width: 18rem;
+            height: 18rem;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        /* FAVORITE BUTTON */
+
+        .favorite-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: absolute;
+            top: 1rem;
+            right: 3rem;
+
+            width: 50px;
+            height: 50px;
+
+            border-radius: 50%;
+            border: none;
+
+            color: #e0e0e0;
+            transition: ease-in-out 0.2s;
+
+            &:hover {
+                background-color: #dfdfdf;
+                
+            }
+
+            i {
+                font-size: 1.2rem;
+                color: black;
+            }
+        }
+    }
+
 }

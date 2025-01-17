@@ -4,11 +4,11 @@ import "./Navbar.scss";
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <div class="container">
+      <div className="container">
         <div className="navbar-brand">
-          <b class="ndo">Ndo</b>
-          <b class="va">va</b>
-          <b class="do">do</b>
+          <b className="ndo">Ndo</b>
+          <b className="va">va</b>
+          <b className="do">do</b>
         </div>
         <ul className="navbar-links">
           <li>
