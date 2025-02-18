@@ -24,8 +24,8 @@
         padding: 0;
 
         .hotel-image {
-            width: 18rem;
-            height: 18rem;
+            width: 15rem;
+            height: 15rem;
             object-fit: cover;
             border-radius: 15px;
         }
@@ -38,8 +38,8 @@
             align-items: center;
 
             position: absolute;
-            top: 1rem;
-            right: 3rem;
+            top: 0.5rem;
+            right: 4rem;
 
             width: 50px;
             height: 50px;
@@ -60,6 +60,82 @@
                 color: black;
             }
         }
+    }
+
+    .hotel-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+
+        h2{
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0088d9
+        }
+
+        i {
+            color: #ffb700;
+        }
+
+        
+    }
+
+    .hotel-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+
+        .hotel-meta {
+            display: flex;
+            gap: 2rem;
+
+            .hotel-location {
+                color: #0088d9;
+                font-size: 1.2rem;
+                text-decoration: underline;
+            }
+
+            .hotel-availability {
+                font-size: 1.2rem;
+                font-weight: 500;
+
+            }
+        }
+
+    }
+
+    .hotel-cta {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 4rem;
+
+        .hotel-price {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        button {
+            width: 50%;
+            padding: 0.5rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #0088d9;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: ease-in-out 0.2s;
+
+            &:hover {
+                background-color: #0077c9;
+            }
+        }
+
+
     }
 
 }

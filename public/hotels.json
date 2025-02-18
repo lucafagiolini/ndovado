@@ -4,80 +4,116 @@
     "name": "Hotel Bella Vista",
     "location": "Roma, Italia",
     "description": "Lussuoso hotel con vista panoramica.",
-    "price": 120,
+    "single-room-price": 120,
+    "single-rooms": 25,
+    "double-room-price": 145,
+    "double-rooms": 14,
     "availability": true,
-    "image": "../img/hotel-img/hotel-1.jpg"
+    "image": "../img/hotel-img/hotel-1.jpg",
+    "rating": 4
   },
   {
     "id": 2,
     "name": "Grand Palace Hotel",
     "location": "Milano, Italia",
     "description": "Eleganza moderna nel cuore della città.",
-    "price": 200,
+    "single-room-price": 200,
+    "single-rooms": 70,
+    "double-room-price": 245,
+    "double-rooms": 87,
     "availability": false,
-    "image": "../img/hotel-img/hotel-2.jpg"
+    "image": "../img/hotel-img/hotel-2.jpg",
+    "rating": 5
   },
   {
     "id": 3,
     "name": "Hotel Riviera",
     "location": "Napoli, Italia",
     "description": "Un'oasi di relax sul lungomare.",
-    "price": 150,
+    "single-room-price": 150,
+    "single-rooms": 56,
+    "double-room-price": 190,
+    "double-rooms": 46,
     "availability": true,
-    "image": "../img/hotel-img/hotel-3.jpg"
+    "image": "../img/hotel-img/hotel-3.jpg",
+    "rating": 3
   },
   {
     "id": 4,
     "name": "Mountain Retreat",
     "location": "Cortina d'Ampezzo, Italia",
     "description": "Un rifugio tranquillo tra le Dolomiti.",
-    "price": 180,
+    "single-room-price": 180,
+    "single-rooms": 54,
+    "double-room-price": 210,
+    "double-rooms": 73,
     "availability": true,
-    "image": "../img/hotel-img/hotel-4.jpg"
+    "image": "../img/hotel-img/hotel-4.jpg",
+    "rating": 4
   },
   {
     "id": 5,
     "name": "City Center Inn",
     "location": "Firenze, Italia",
     "description": "Confortevole e nel cuore della città.",
-    "price": 110,
+    "single-room-price": 110,
+    "single-rooms": 32,
+    "double-room-price": 150,
+    "double-rooms": 31,
     "availability": true,
-    "image": "../img/hotel-img/hotel-5.jpg"
+    "image": "../img/hotel-img/hotel-5.jpg",
+    "rating": 2
   },
   {
     "id": 6,
     "name": "Lago Sereno Hotel",
     "location": "Como, Italia",
     "description": "Vista mozzafiato sul Lago di Como.",
-    "price": 250,
+    "single-room-price": 250,
+    "single-rooms": 78,
+    "double-room-price": 320,
+    "double-rooms": 34,
     "availability": false,
-    "image": "../img/hotel-img/hotel-6.jpg"
+    "image": "../img/hotel-img/hotel-6.jpg",
+    "rating": 5
   },
   {
     "id": 7,
     "name": "Hotel Verona Classic",
     "location": "Verona, Italia",
     "description": "Stile classico vicino all'Arena.",
-    "price": 130,
+    "single-room-price": 130,
+    "single-rooms": 23,
+    "double-room-price": 160,
+    "double-rooms": 90,
     "availability": true,
-    "image": "../img/hotel-img/hotel-7.jpg"
+    "image": "../img/hotel-img/hotel-7.jpg",
+    "rating": 3
   },
   {
     "id": 8,
     "name": "Seaside Paradise",
     "location": "Rimini, Italia",
     "description": "Ideale per vacanze in famiglia sulla spiaggia.",
-    "price": 140,
+    "single-room-price": 140,
+    "single-rooms": 71,
+    "double-room-price": 180,
+    "double-rooms": 45,
     "availability": true,
-    "image": "../img/hotel-img/hotel-8.jpg"
+    "image": "../img/hotel-img/hotel-8.jpg",
+    "rating": 4
   },
   {
     "id": 9,
     "name": "Venetian Elegance",
     "location": "Venezia, Italia",
     "description": "Un soggiorno romantico vicino ai canali.",
-    "price": 300,
+    "single-room-price": 300,
+    "single-rooms": 33,
+    "double-room-price": 350,
+    "double-rooms": 40,
     "availability": false,
-    "image": "../img/hotel-img/hotel-9.jpg"
+    "image": "../img/hotel-img/hotel-9.jpg",
+    "rating": 5
   }
 ]

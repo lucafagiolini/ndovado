@@ -26,6 +26,14 @@ const HotelCard = () => {
     fetchHotels();
   }, []);
 
+  const renderStars = (rating) => {
+    const stars = [];
+    for (let i = 0; i < rating; i++) {
+      stars.push(<i key={i} className="fa-solid fa-star"></i>);
+    }
+    return stars;
+  };
+
   if (loading) return <CircularProgress />;
 
   return (
@@ -35,18 +43,27 @@ const HotelCard = () => {
           <div className="hotel-image-box col-3">
             <img className="hotel-image" src={hotel.image} alt={hotel.name} />
             <button className="favorite-button">
-              <i class="fa-regular fa-heart"></i>
+              <i className="fa-regular fa-heart"></i>
             </button>
           </div>
           <div className="hotel-details col-6">
-            <h2>{hotel.name}</h2>
-            <span>Description: {hotel.description}</span>
-            <span>Location: {hotel.location}</span>
-            <span>Availability: {hotel.availability ? "Yes" : "No"}</span>
+            <div className="hotel-header">
+              <h2>{hotel.name}</h2>
+              <span>{renderStars(hotel.rating)}</span>
+            </div>
+            <div className="hotel-info">
+              <span className="hotel-description">{hotel.description}</span>
+              <div className="hotel-meta">
+                <span className="hotel-location">{hotel.location}</span>
+                <span className="hotel-availability">
+                  {hotel.availability ? "Available" : "Not Available"}
+                </span>
+              </div>
+            </div>
           </div>
           <div className="hotel-cta col-3">
+            <span className="hotel-price">€ {hotel.price}</span>
             <button>Book Now</button>
-            <span>Price: €{hotel.price}/night</span>
           </div>
         </div>
       ))}

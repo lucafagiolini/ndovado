@@ -2,13 +2,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #003b95;
     color: white;
     padding: 10px 20px;
-
     margin-bottom: 3rem;
   }
   
+
+  /* LOGO */
   .navbar-brand {
     
     font-weight: bold;
@@ -29,6 +30,8 @@
     }
   }
   
+
+
   .navbar-links {
     list-style: none;
     display: flex;
