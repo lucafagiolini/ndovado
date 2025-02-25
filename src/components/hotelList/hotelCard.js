@@ -4,7 +4,7 @@ import { CircularProgress } from "@mui/material";
 /* STYLE */
 import "../hotelList/hotelCard.scss";
 
-const HotelCard = () => {
+const HotelCard = ({ roomType }) => {
   const [hotels, setHotels] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -26,6 +26,7 @@ const HotelCard = () => {
     fetchHotels();
   }, []);
 
+  /* Function that renders the rating in stars */
   const renderStars = (rating) => {
     const stars = [];
     for (let i = 0; i < rating; i++) {
@@ -62,7 +63,12 @@ const HotelCard = () => {
             </div>
           </div>
           <div className="hotel-cta col-3">
-            <span className="hotel-price">€ {hotel.price}</span>
+            <span className="hotel-price">
+              €{" "}
+              {roomType === "single"
+                ? hotel["single-room-price"]
+                : hotel["double-room-price"]}
+            </span>
             <button>Book Now</button>
           </div>
         </div>
