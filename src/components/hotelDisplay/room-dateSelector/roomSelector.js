@@ -5,6 +5,9 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
+/* STYLE */
+import "../room-dateSelector/roomSelector.scss";
+
 export default function RoomSelector({roomType, setRoomType}) {
 
   const handleChange = (event) => {
@@ -13,20 +16,22 @@ export default function RoomSelector({roomType, setRoomType}) {
   };
 
   return (
-    <Box sx={{ minWidth: 120 }}>
-      <FormControl fullWidth>
-        <InputLabel id="room-selector">Room</InputLabel>
-        <Select
-          labelId="room-selector"
-          id="room-selector"
-          value={roomType}
-          label="Room"
-          onChange={handleChange}
-        >
-          <MenuItem value={"single"}>Single</MenuItem>
-          <MenuItem value={"double"}>Double</MenuItem>
-        </Select>
-      </FormControl>
-    </Box>
+    <div className="room-selector">
+      <Box sx={{ minWidth: 120 }}>
+        <FormControl fullWidth>
+          <InputLabel id="room-selector">Room</InputLabel>
+          <Select
+            labelId="room-selector"
+            id="room-selector"
+            value={roomType}
+            label="Room"
+            onChange={handleChange}
+          >
+            <MenuItem value={"single"}>Single</MenuItem>
+            <MenuItem value={"double"}>Double</MenuItem>
+          </Select>
+        </FormControl>
+      </Box>
+    </div>
   );
 }

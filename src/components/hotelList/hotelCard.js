@@ -4,7 +4,7 @@ import { CircularProgress } from "@mui/material";
 /* STYLE */
 import "../hotelList/hotelCard.scss";
 
-const HotelCard = ({ roomType }) => {
+const HotelCard = ({ roomType, dateDifference }) => {
   const [hotels, setHotels] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -64,10 +64,13 @@ const HotelCard = ({ roomType }) => {
           </div>
           <div className="hotel-cta col-3">
             <span className="hotel-price">
-              €{" "}
+              €
               {roomType === "single"
-                ? hotel["single-room-price"]
-                : hotel["double-room-price"]}
+                ? hotel["single-room-price"] * dateDifference
+                : hotel["double-room-price"] * dateDifference}
+            </span>
+            <span className="hotel-date-difference">
+              {dateDifference} nights
             </span>
             <button>Book Now</button>
           </div>
