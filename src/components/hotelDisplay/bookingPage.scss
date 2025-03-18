@@ -1,0 +1,44 @@
+.booking-page{
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .booking-details{
+        display: flex;
+        gap: 3rem;
+        margin-top: 2rem;
+
+       h2 {
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #0088d9
+       }
+       
+      
+        .hotel-price {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-left: 1rem;
+        }
+    
+    }
+
+    button {
+        width: 50%;
+        padding: 0.5rem;
+        border: none;
+        border-radius: 5px;
+        background-color: #0088d9;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: ease-in-out 0.2s;
+
+        &:hover {
+            background-color: #0077c9;
+        }
+    }
+}

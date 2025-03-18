@@ -1,12 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { CircularProgress } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import { BookingContext } from "../hotelDisplay/bookingContext";
 
 /* STYLE */
 import "../hotelList/hotelCard.scss";
 
-const HotelCard = ({ roomType, dateDifference }) => {
+const HotelCard = ({ roomType, dateDifference, fromDate, toDate }) => {
   const [hotels, setHotels] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { setBookingDetails } = useContext(BookingContext);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchHotels = async () => {
@@ -35,6 +39,36 @@ const HotelCard = ({ roomType, dateDifference }) => {
     return stars;
   };
 
+  const handleBooking = (hotel, hotelId) => {
+    setBookingDetails({
+      hotelName: hotel.name,
+      roomType,
+      price:
+        roomType === "single"
+          ? hotel["single-room-price"] * dateDifference
+          : hotel["double-room-price"] * dateDifference,
+      fromDate,
+      toDate,
+      dateDifference,
+    });
+
+    setHotels((prevHotels) =>
+      prevHotels.map((hotel) => {
+        if (hotel.id === hotelId) {
+          if (roomType === "single" && hotel["single-rooms"] > 0) {
+            return { ...hotel, "single-rooms": hotel["single-rooms"] - 1 };
+          } else if (roomType === "double" && hotel["double-rooms"] > 0) {
+            return { ...hotel, "double-rooms": hotel["double-rooms"] - 1 };
+          }
+        }
+        return hotel;
+      })
+    );
+    navigate("/booking");
+    console.log(hotel["single-rooms"]);
+    console.log(hotel["double-rooms"]);
+  };
+
   if (loading) return <CircularProgress />;
 
   return (
@@ -56,10 +90,14 @@ const HotelCard = ({ roomType, dateDifference }) => {
               <span className="hotel-description">{hotel.description}</span>
               <div className="hotel-meta">
                 <span className="hotel-location">{hotel.location}</span>
-                <span className="hotel-availability">
-                  {hotel.availability ? "Available" : "Not Available"}
-                </span>
+                <div className="hotel-availability">
+                  <span>
+                    {hotel.availability ? "Available" : "Not Available"}
+                  </span>
+                </div>
               </div>
+              <span>single rooms: {hotel["single-rooms"]}</span>
+              <span>double rooms: {hotel["double-rooms"]}</span>
             </div>
           </div>
           <div className="hotel-cta col-3">
@@ -72,7 +110,9 @@ const HotelCard = ({ roomType, dateDifference }) => {
             <span className="hotel-date-difference">
               {dateDifference} nights
             </span>
-            <button>Book Now</button>
+            <button className="book-now" onClick={() => handleBooking(hotel)}>
+              Book Now
+            </button>
           </div>
         </div>
       ))}

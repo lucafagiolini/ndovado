@@ -11,7 +11,6 @@ import "../hotelDisplay/hotelDisplay.scss";
 const HotelDisplay = () => {
   /* FUNCTION that set the value for the room and will pass the value with props to Hotel Card component */
   const [roomType, setRoomType] = useState("single");
-
   const [fromDate, setFromDate] = useState();
   const [toDate, setToDate] = useState();
 
@@ -34,7 +33,7 @@ const HotelDisplay = () => {
   console.log(dateDifference);
 
   return (
-    <div className="hotel-display">
+    <div className="hotel-display container">
       <div className="room-date-selector-box">
         <DateSelector
           fromDate={fromDate}
@@ -45,7 +44,12 @@ const HotelDisplay = () => {
         <RoomSelector roomType={roomType} setRoomType={setRoomType} />
       </div>
       <h1>Available Hotels</h1>
-      <HotelCard roomType={roomType} dateDifference={dateDifference} />
+      <HotelCard
+        roomType={roomType}
+        dateDifference={dateDifference}
+        fromDate={formattedFromDate}
+        toDate={formattedToDate}
+      />
     </div>
   );
 };
